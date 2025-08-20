@@ -30,7 +30,7 @@ class RateLimiter:
     def __init__(self):
         self.usage = defaultdict(list)  # user_id -> list of timestamps
         self.daily_limit = int(os.getenv("DAILY_OPENAI_LIMIT", 40))  # requests per day per user
-        self.hourly_limit = int(os.getenv("HOURLY_OPENAI_LIMIT", 5))   # requests per hour per user
+        self.hourly_limit = int(os.getenv("HOURLY_OPENAI_LIMIT", 20))   # requests per hour per user
     
     def can_make_request(self, user_id: str) -> tuple[bool, str]:
         """Check if user can make a request. Returns (allowed, reason)"""
@@ -139,7 +139,7 @@ with gr.Blocks(title="RAGio - Educational RAG with Custom System Prompts") as de
     # 📚 RAGio - Educational RAG System
     
     **⚠️ Educational Use Only**: This system uses a shared OpenAI API key with rate limits to prevent abuse.
-    - OpenAI requests: 5 per hour, 40 per day per user
+    - OpenAI requests: 20 per hour, 40 per day per user
     - HuggingFace models: Unlimited (recommended for experimentation)
     
     **🎯 Learning Goal**: Understand how system prompts affect AI behavior in RAG systems.

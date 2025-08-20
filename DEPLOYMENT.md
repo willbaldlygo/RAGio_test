@@ -36,7 +36,7 @@
 
 Add these in "Repository secrets" or "Variables":
 - `DAILY_OPENAI_LIMIT`: 40
-- `HOURLY_OPENAI_LIMIT`: 5
+- `HOURLY_OPENAI_LIMIT`: 20
 - `EMB_MODEL`: sentence-transformers/all-mpnet-base-v2
 - `RERANK_MODEL`: cross-encoder/ms-marco-MiniLM-L-6-v2
 - `HF_MODEL`: mistralai/Mistral-7B-Instruct-v0.2
