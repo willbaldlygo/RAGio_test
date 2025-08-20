@@ -60,20 +60,35 @@
             max-width: 700px;
             box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px;
         }
+
+        .system-prompt {
+            color: #111 !important;
+            background: #ffd700;
+            display: block;
+            border-radius: 6px;
+            padding: 6px 10px;
+            line-height: 1.6rem;
+            max-width: 700px;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
 <div class="prose svelte-1ybaih5" id="component-6">
 <h2>Prompt</h2>
 Below is the prompt that is given to the model. <hr>
-<h2>Instructions</h2>
-    <span class="instructions">Use the following pieces of context to answer the question at the end.<br>If you don't know the answer, just say that you don't know, <span style="font-weight: bold;">don't try to make up an answer.</span></span><br>
+
+<h2>System Prompt</h2>
+<span class="system-prompt">{{ system_prompt }}</span>
+
 <h2>History</h2>
 {% for entry in history %}
     <div class="history-entry">
         <strong>{{ entry[0] }}</strong>: {{ entry[1] }}
     </div>
 {% endfor %}
+
 <h2>Context</h2>
 {% for doc in documents %}
     <details class="doc-box">
@@ -84,8 +99,8 @@ Below is the prompt that is given to the model. <hr>
     </details>
 {% endfor %}
 
-    <h2>Query</h2>
-    <span class="query">{{ query }}</span>
+<h2>Query</h2>
+<span class="query">{{ query }}</span>
 </div>
 
 <script>

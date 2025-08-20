@@ -1,52 +1,91 @@
 ---
-title: RAGio
-emoji: 📉
+title: RAGio Educational
+emoji: 📚
 colorFrom: indigo
-colorTo: indigo
+colorTo: purple
 sdk: gradio
-sdk_version: 4.27.0
+sdk_version: 4.31.4
 app_file: app.py
 pinned: false
+suggested_hardware: cpu-basic
 ---
 
-# RAGio - simple to start RAG with HuggingFace gradio interface.
+# RAGio - Educational RAG with Custom System Prompts
 
-Retrieval-Augmented Generation (RAG) with a Gradio interface. Perfect for both beginners and experienced developers looking to integrate advanced NLP features.
+An interactive learning tool for understanding Retrieval-Augmented Generation (RAG) and prompt engineering. Perfect for students and educators exploring how different system prompts affect AI behavior.
 
-## Features
+## 🎓 Educational Features
 
-- **Beginner Friendly**: Easily set up and run your RAG models locally or host them on HuggingFace Spaces. Currently supports *.pdf documents only.
-- **Interactive UI**: Engage with your models and data in real time through a dynamic Gradio interface.
-- **HuggingFace and OpenAI APIs**: Utilizes HuggingFace and OpenAI API.
-- **Vector store with LanceDB**: Utilizes LanceDB to store and manage embedding vectors.
-- **Multiple Chunking Strategies**: Coming soon ...  
+- **Interactive System Prompt Editor**: Modify how the AI responds to queries
+- **Real-time Prompt Visualization**: See exactly what prompt is sent to the model
+- **Example Prompts**: Try different prompt styles to see their effects
+- **Document Upload**: Upload your own PDFs to create custom knowledge bases
+- **Multiple AI Providers**: Compare responses from HuggingFace and OpenAI models
+- **Rate Limiting**: Learn about API constraints and cost management
+
+## 🚀 How to Use
+
+1. **Upload a Document**: Start by uploading a PDF file
+2. **Customize System Prompt**: Edit the system prompt to change AI behavior
+3. **Ask Questions**: Chat with your documents using the modified prompt
+4. **Observe Changes**: See how different prompts affect responses
+5. **Experiment**: Try the example prompts to understand different AI personalities
+
+## 📚 Learning Objectives
+
+Students will learn:
+- How system prompts control AI behavior
+- The impact of prompt engineering on response quality
+- How RAG combines retrieval with generation
+- The difference between various prompting strategies
+- Real-world API constraints and rate limiting
+- Cost considerations in AI applications
+
+## 🔧 Technical Details
+
+- **Vector Store**: LanceDB for efficient similarity search
+- **Embeddings**: Sentence Transformers for document encoding
+- **Reranking**: Cross-encoder for improved relevance
+- **LLMs**: HuggingFace Transformers and OpenAI APIs
+- **Security**: Rate limiting and API key protection
+
+## 💡 Example System Prompts to Try
+
+**Analytical**: "Analyze the provided documents critically and point out any limitations before answering."
+
+**Creative**: "Explain concepts using analogies and examples to make them easy to understand."
+
+**Concise**: "Provide brief, direct answers using only the document information. Maximum 2 sentences."
+
+**Tutor**: "Act as a patient tutor. Break down complex information into step-by-step explanations."
+
+## 🆓 Free Usage
+
+This space runs on HuggingFace's free infrastructure using open-source models. OpenAI usage is rate-limited for educational purposes:
+- **HuggingFace Models**: Unlimited usage (recommended for experimentation)
+- **OpenAI Models**: 5 requests per hour, 20 per day per user
+
+## 🔒 Security Features
+
+- API keys stored securely in HuggingFace Secrets
+- Per-user rate limiting to prevent abuse
+- Usage tracking and monitoring
+- Graceful fallback to free models
 
 ## Quick Start
 
-Get started with RAGio by cloning the repository and installing dependencies:
+Get started with RAGio by uploading a PDF and experimenting with different system prompts:
 
-```bash
-git clone https://github.com/your-username/RAGio.git
-cd RAGio
-pip install -r requirements.txt
-```
-
-### Run the application
-
-**Important!**\
-Ensure to configure your environment by filling in the *.template.env* file with your HuggingFace and OpenAI credentials. Rename this file to *.env* after updating.
-
-```bash
-cd RAGio
-source ./.env  # apply environment variables
-gradio app.py  # run gradio app
-```
-
-Open http://127.0.0.1:7860 in your browser.
-
-For more details on configuration and usage, check out our documentation.
+1. Upload any PDF document
+2. Try the default system prompt
+3. Modify the prompt using the examples provided
+4. Ask questions and observe how responses change
+5. Compare HuggingFace vs OpenAI model responses
 
 ## Contributing
 
-Contributing
 Your contributions are welcome! If you have suggestions or want to improve RAGio, feel free to fork the repository, make changes, and submit a pull request.
+
+---
+
+*Built for educational purposes - experiment freely and learn about the fascinating world of RAG and prompt engineering!*
