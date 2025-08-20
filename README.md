@@ -63,7 +63,7 @@ Students will learn:
 
 This space runs on HuggingFace's free infrastructure using open-source models. OpenAI usage is rate-limited for educational purposes:
 - **HuggingFace Models**: Unlimited usage (recommended for experimentation)
-- **OpenAI Models**: 5 requests per hour, 20 per day per user
+- **OpenAI Models**: 5 requests per hour, 40 per day per user
 
 ## 🔒 Security Features
 

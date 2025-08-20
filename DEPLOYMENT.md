@@ -35,7 +35,7 @@
 ### 4. Configure Environment Variables
 
 Add these in "Repository secrets" or "Variables":
-- `DAILY_OPENAI_LIMIT`: 20
+- `DAILY_OPENAI_LIMIT`: 40
 - `HOURLY_OPENAI_LIMIT`: 5
 - `EMB_MODEL`: sentence-transformers/all-mpnet-base-v2
 - `RERANK_MODEL`: cross-encoder/ms-marco-MiniLM-L-6-v2
@@ -66,9 +66,9 @@ Add these in "Repository secrets" or "Variables":
 
 ### Expected Costs (OpenAI):
 - **GPT-3.5-turbo**: ~$0.002 per request
-- **With 20 req/day limit**: ~$0.04 per user per day
-- **50 students**: ~$2 per day maximum
-- **Monthly estimate**: ~$60 maximum
+- **With 40 req/day limit**: ~$0.08 per user per day
+- **50 students**: ~$4 per day maximum
+- **Monthly estimate**: ~$120 maximum
 
 ### Cost Reduction Tips:
 1. Default to HuggingFace models (free)
